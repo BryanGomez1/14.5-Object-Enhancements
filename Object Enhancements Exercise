@@ -1,0 +1,44 @@
+//part 1
+function createInstructor(firstName, lastName){
+  return {
+    firstName,
+    lastName
+  }
+}
+
+//part 2
+let favoriteNumber = 42;
+
+const instructor = {
+  firstName: "Colt",
+  [favoriteNumber]: "That is my favorite!"
+}
+
+//part 3
+const instructor = {
+  firstName: "Colt",
+  sayHi(){
+    return "Hi!";
+  },
+  sayBye(){
+    return this.firstName + " says bye!";
+  }
+}
+
+//part 4
+const d = createAnimal("dog", "bark", "Woooof!")
+// {species: "dog", bark: ƒ}
+d.bark()  //"Woooof!"
+
+const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
+// {species: "sheep", bleet: ƒ}
+s.bleet() //"BAAAAaaaa"
+
+function createAnimal(species, verb, sound){
+  return {
+    species,
+    [verb](){
+      return sound;
+    }
+  }
+}
